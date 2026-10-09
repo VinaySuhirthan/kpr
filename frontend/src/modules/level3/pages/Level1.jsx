@@ -32,7 +32,8 @@ export function Level1Page({ analysis, upload }) {
   return (
     <>
       <section className="page-header">
-        <h2 className="page-title">Level 1: AMR Gene Detection</h2>
+        <div className="eyebrow">AMR DETECTION <span>—</span> GENOMIC PROFILING</div>
+        <h1 className="page-title">NCBI AMRFinderPlus <span>Gene Detection</span></h1>
         <p className="page-subtitle">
           Upload bacterial genome sequences to automatically identify AMR genes, their genomic locations,
           and annotation details using NCBI AMRFinderPlus.

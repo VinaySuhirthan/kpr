@@ -225,7 +225,8 @@ export default function Level1Module() {
   return (
     <div className="level1-module">
       <div className="page-title-section">
-        <h2>Level 1 – AMR Detection &amp; Genotype-Phenotype Analysis</h2>
+        <div className="eyebrow">AMR PREDICTION <span>—</span> GENOMIC INTELLIGENCE</div>
+        <h1>Genotype–Phenotype <span>Prediction Analysis</span></h1>
         <p>
           Analyze bacterial genomes and <strong>connect</strong> genetic findings with laboratory resistance profiles.
         </p>

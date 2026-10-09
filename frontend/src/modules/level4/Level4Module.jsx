@@ -219,22 +219,12 @@ function App() {
   }
 
   return (
-    <main className="dashboard">
-      <header className="topbar">
-        <a className="brand" href="#top" aria-label="AMR surveillance dashboard home">
-          <span className="brand-mark">+</span>
-          <span>Sentinel<span className="brand-light">AMR</span></span>
-        </a>
-        <div className="header-meta">
-          <span className="header-date">Surveillance workspace</span>
-        </div>
-      </header>
-
+    <main className="dashboard level4-dashboard">
       <section className="page-intro" id="top">
         <div>
-          <p className="eyebrow">HOSPITAL SURVEILLANCE · FORECASTING</p>
-          <h1>AMR Surveillance &amp;<br className="mobile-break" /> Resistance Forecasting</h1>
-          <p className="subtitle">Hospital-level antimicrobial resistance intelligence</p>
+          <div className="eyebrow">HOSPITAL SURVEILLANCE <span>—</span> TIME-SERIES INTELLIGENCE</div>
+          <h1>Resistance <span>Trend Forecasting</span></h1>
+          <p className="subtitle">Antimicrobial resistance monitoring, predictive trajectory and early outbreak warning.</p>
         </div>
         <div className="intro-note">
           <span className="note-icon">i</span>
@@ -290,7 +280,7 @@ function App() {
         <article className="panel risks-panel">
           <div className="panel-heading">
             <div>
-              <p className="section-caption"><span className="caption-index">04</span> SURVEILLANCE WATCHLIST</p>
+              <p className="section-caption"><span className="caption-index">03</span> SURVEILLANCE WATCHLIST</p>
               <h2>Priority resistance signals</h2>
             </div>
             <span className="record-count">{risks.length} signals</span>
@@ -320,7 +310,7 @@ function App() {
         <article className="panel relationship-panel">
           <div className="panel-heading">
             <div>
-              <p className="section-caption"><span className="caption-index">05</span> ANTIBIOTIC ASSOCIATIONS</p>
+              <p className="section-caption"><span className="caption-index">04</span> ANTIBIOTIC ASSOCIATIONS</p>
               <h2>Observed relationships</h2>
             </div>
           </div>

@@ -1,15 +1,11 @@
-import { Sidebar } from './Sidebar';
+import React from 'react';
 import { Header } from './Header';
 
 export function PageLayout({ children, toolStatus, onRefreshStatus }) {
   return (
-    <div className="app-container">
-      <Sidebar activeTab="level1" />
-      <div className="main-wrapper">
-        <Header toolStatus={toolStatus} onRefreshStatus={onRefreshStatus} />
-        <main className="page-container" role="main">
-          {children}
-        </main>
+    <div className="level3-module-wrapper">
+      <div className="level3-inner-content">
+        {children}
       </div>
     </div>
   );

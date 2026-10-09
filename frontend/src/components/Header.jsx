@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Dna, Activity, Search, LineChart, Database, ShieldCheck, AlertTriangle } from 'lucide-react';
+import logoImg from '../assets/logo.png';
 import './Header.css';
 
 export default function Header() {
@@ -23,7 +24,7 @@ export default function Header() {
     <header className="platform-header">
       <div className="header-brand">
         <div className="brand-logo">
-          <Dna className="logo-icon" />
+          <img src={logoImg} alt="AMR Unified Platform Logo" className="brand-logo-img" />
         </div>
         <div className="brand-text">
           <h1>AMR Unified Platform</h1>

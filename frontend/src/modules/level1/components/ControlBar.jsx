@@ -14,20 +14,18 @@ export default function ControlBar({
 }) {
   return (
     <div className="card control-bar-card">
-      <div className="control-group">
-
-        {/* Organism Select */}
+      <div className="control-bar-inner">
         <div className="control-item">
-          <label htmlFor="organism-select" className="control-label">Organism:</label>
-          <div className="select-pill-wrapper">
+          <label htmlFor="organism-select" className="control-label">ORGANISM</label>
+          <div className="select-wrapper">
             <select
               id="organism-select"
-              className="select-pill"
+              className="custom-select"
               value={selectedOrganism}
               onChange={(e) => setSelectedOrganism(e.target.value)}
               disabled={organismsLoading || organisms.length === 0}
             >
-              {organismsLoading && <option value="">Loading…</option>}
+              {organismsLoading && <option value="">Loading organisms…</option>}
               {!organismsLoading && organisms.length === 0 && (
                 <option value="">No organisms available</option>
               )}
@@ -39,18 +37,17 @@ export default function ControlBar({
           </div>
         </div>
 
-        {/* Isolate ID Select */}
         <div className="control-item">
-          <label htmlFor="isolate-select" className="control-label">Isolate ID:</label>
-          <div className="select-pill-wrapper">
+          <label htmlFor="isolate-select" className="control-label">ISOLATE ID</label>
+          <div className="select-wrapper">
             <select
               id="isolate-select"
-              className="select-pill"
+              className="custom-select"
               value={selectedIsolate}
               onChange={(e) => setSelectedIsolate(e.target.value)}
               disabled={isolatesLoading || isolates.length === 0}
             >
-              {isolatesLoading && <option value="">Loading…</option>}
+              {isolatesLoading && <option value="">Loading isolates…</option>}
               {!isolatesLoading && isolates.length === 0 && (
                 <option value="">No isolates available</option>
               )}
@@ -62,16 +59,17 @@ export default function ControlBar({
           </div>
         </div>
 
+        <div className="control-action">
+          <button
+            className="btn-analyze"
+            onClick={onAnalyze}
+            disabled={!selectedIsolate}
+          >
+            <Search size={15} />
+            <span>Analyze Isolate</span>
+          </button>
+        </div>
       </div>
-
-      <button
-        className="btn-analyze"
-        onClick={onAnalyze}
-        disabled={!selectedIsolate}
-      >
-        <Search size={15} />
-        <span>Analyze</span>
-      </button>
     </div>
   );
 }

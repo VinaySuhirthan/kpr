@@ -1,114 +1,111 @@
-/* Level 1 Module Scoped Styles */
-.level1-module {
-  --bg-app: #f6f8f7;
-  --bg-card: #ffffff;
-  --bg-card-tint-green: #f1f8f4;
-  
-  --border-color: #e2e7e4;
-  --border-subtle: #ebf0ed;
-  
-  --text-primary: #111827;
-  --text-secondary: #4b5563;
-  --text-muted: #6b7280;
-  --text-light: #9ca3af;
-  
-  --brand-green-dark: #154234;
-  --brand-green-hover: #0e3025;
-  --brand-green-text: #133e32;
-  
-  --badge-green-bg: #e6f4ea;
-  --badge-green-text: #0d593f;
-  --badge-green-border: #c3e6d2;
-  
-  --badge-red-bg: #fde8e8;
-  --badge-red-text: #c81e1e;
-  --badge-red-border: #f8b4b4;
-  
-  --badge-grey-bg: #f3f4f6;
-  --badge-grey-text: #4b5563;
-  
-  --track-bg: #eaeaea;
-  --track-block-bg: #d4d4d4;
-  --gene-amr-color: #10b981;
-  --gene-mutation-color: #ef4444;
-  --gene-other-color: #d1d5db;
-  
-  --radius-sm: 6px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
-  --radius-pill: 9999px;
-  
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.03);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.04), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
-  
-  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-mono: 'JetBrains Mono', 'SF Mono', Consolas, Monaco, monospace;
+/* ============================================================
+   LEVEL 1 MODULE — Genotype-Phenotype Prediction Analysis
+   Aligned with Level 2 Surveillance Design System & Palette
+   ============================================================ */
 
-  font-family: var(--font-sans);
-  color: var(--text-primary);
+.level1-module {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 4px 40px;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 22px;
 }
 
+/* ============================================================
+   Page Header (Matches Level 2 Trend Detection style)
+   ============================================================ */
 .level1-module .page-title-section {
   display: flex;
   flex-direction: column;
   gap: 4px;
+  padding: 4px 0 12px;
 }
 
-.level1-module .page-title-section h2 {
-  font-size: 22px;
+.level1-module .eyebrow {
+  font-family: var(--font-mono, 'SF Mono', Consolas, monospace);
+  font-size: 11px;
   font-weight: 700;
-  color: var(--text-primary);
-  letter-spacing: -0.4px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--text-muted, #737373);
+  margin-bottom: 2px;
+}
+
+.level1-module .eyebrow span {
+  margin: 0 4px;
+  color: var(--text-light, #a3a3a3);
+}
+
+.level1-module .page-title-section h1 {
+  font-family: var(--font-display, 'Plus Jakarta Sans', sans-serif);
+  font-size: clamp(28px, 3.2vw, 38px);
+  font-weight: 800;
+  color: var(--text-primary, #171717);
+  letter-spacing: -1.6px;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.level1-module .page-title-section h1 span {
+  color: var(--accent, #0891b2);
 }
 
 .level1-module .page-title-section p {
-  color: var(--text-secondary);
-  font-size: 13px;
+  color: var(--text-secondary, #525252);
+  font-size: 14px;
+  margin-top: 4px;
+  line-height: 1.5;
 }
 
+/* Error Banner */
 .level1-module .error-banner {
-  background-color: #fef2f2;
-  border: 1px solid #fecaca;
-  color: #991b1b;
-  padding: 12px 16px;
-  border-radius: var(--radius-md);
+  background: var(--color-danger-bg, #fef2f2);
+  border: 1px solid rgba(220, 38, 38, 0.2);
+  color: var(--color-danger-text, #991b1b);
+  padding: 13px 18px;
+  border-radius: var(--radius-md, 10px);
   font-size: 13px;
   font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: var(--shadow-sm, 0 1px 2px rgba(0,0,0,0.04));
 }
 
-/* Controls */
+/* ============================================================
+   Control Bar Card (Horizontal, Clean inputs)
+   ============================================================ */
 .level1-module .control-bar-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-lg);
+  background: var(--bg-card, #ffffff);
+  border: 1px solid var(--border-subtle, #e5e5e5);
+  border-radius: var(--radius-lg, 14px);
   padding: 18px 24px;
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-card, 0 14px 34px rgba(0, 0, 0, 0.04));
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.level1-module .control-bar-grid {
+.level1-module .control-bar-inner {
   display: flex;
   align-items: flex-end;
   gap: 20px;
   flex-wrap: wrap;
 }
 
-.level1-module .control-group {
+.level1-module .control-item {
   display: flex;
   flex-direction: column;
   gap: 6px;
   flex: 1;
-  min-width: 200px;
+  min-width: 220px;
 }
 
 .level1-module .control-label {
   font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
-  color: var(--text-secondary);
+  letter-spacing: 0.6px;
+  color: var(--text-muted, #737373);
 }
 
 .level1-module .select-wrapper {
@@ -121,322 +118,181 @@
   width: 100%;
   appearance: none;
   background-color: #ffffff;
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-md);
-  padding: 10px 36px 10px 14px;
-  font-size: 13px;
+  border: 1px solid var(--border-subtle, #e5e5e5);
+  border-radius: var(--radius-sm, 6px);
+  padding: 10px 38px 10px 14px;
+  font-size: 13.5px;
   font-weight: 500;
-  color: var(--text-primary);
+  color: var(--text-primary, #171717);
   cursor: pointer;
   transition: all 0.15s ease;
+  font-family: var(--font-sans);
+  height: 42px;
 }
 
 .level1-module .custom-select:focus {
   outline: none;
-  border-color: var(--brand-green-dark);
-  box-shadow: 0 0 0 3px rgba(21, 66, 52, 0.1);
+  border-color: var(--accent, #0891b2);
+  box-shadow: 0 0 0 3px rgba(8, 145, 178, 0.12);
+}
+
+.level1-module .custom-select:hover {
+  border-color: var(--border-strong, #d4d4d4);
 }
 
 .level1-module .select-chevron {
   position: absolute;
-  right: 12px;
+  right: 14px;
   pointer-events: none;
-  color: var(--text-muted);
+  color: var(--text-muted, #737373);
+}
+
+.level1-module .control-action {
+  display: flex;
+  align-items: flex-end;
 }
 
 .level1-module .btn-analyze {
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
-  background-color: var(--brand-green-dark);
+  background: var(--gradient-dark, linear-gradient(135deg, #171717 0%, #333333 100%));
   color: #ffffff;
-  border: none;
-  border-radius: var(--radius-md);
-  padding: 10px 22px;
-  font-size: 13px;
+  border: 1px solid #000000;
+  border-radius: var(--radius-sm, 6px);
+  padding: 0 24px;
+  font-size: 13.5px;
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.15s ease;
-  height: 41px;
+  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: var(--shadow-btn, 0 8px 18px rgba(0, 0, 0, 0.16));
+  white-space: nowrap;
+  height: 42px;
 }
 
-.level1-module .btn-analyze:hover {
-  background-color: var(--brand-green-hover);
+.level1-module .btn-analyze:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-btn-hover, 0 12px 24px rgba(0, 0, 0, 0.2));
+  background: #000000;
 }
 
 .level1-module .btn-analyze:disabled {
-  opacity: 0.6;
+  opacity: 0.45;
   cursor: not-allowed;
+  box-shadow: none;
 }
 
-/* Grids & Cards */
+/* ============================================================
+   Cards & Layout Grids
+   ============================================================ */
+.level1-module .grid-2-col-asymmetric {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(340px, 1fr);
+  gap: 20px;
+}
+
 .level1-module .grid-2-col {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 24px;
+  gap: 20px;
 }
 
-.level1-module .grid-2-col-asymmetric {
-  display: grid;
-  grid-template-columns: 1.3fr 0.7fr;
-  gap: 24px;
-}
-
-@media (max-width: 1024px) {
-  .level1-module .grid-2-col,
-  .level1-module .grid-2-col-asymmetric {
+@media (max-width: 1080px) {
+  .level1-module .grid-2-col-asymmetric,
+  .level1-module .grid-2-col {
     grid-template-columns: 1fr;
   }
 }
 
 .level1-module .card {
-  background-color: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-lg);
-  padding: 20px;
-  box-shadow: var(--shadow-sm);
+  background: var(--bg-card, #ffffff);
+  border: 1px solid var(--border-subtle, #e5e5e5);
+  border-radius: var(--radius-lg, 14px);
+  padding: 24px;
+  box-shadow: var(--shadow-card, 0 14px 34px rgba(0, 0, 0, 0.04));
+  position: relative;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.level1-module .empty-state-card {
-  text-align: center;
-  padding: 48px 20px;
-  color: var(--text-secondary);
-}
-
-.level1-module .loading-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 48px;
-  gap: 16px;
-}
-
-.level1-module .loading-spinner {
-  width: 32px;
-  height: 32px;
-  border: 3px solid var(--border-color);
-  border-top-color: var(--brand-green-dark);
-  border-radius: 50%;
-  animation: l1-spin 0.8s linear infinite;
-}
-
-@keyframes l1-spin {
-  to { transform: rotate(360deg); }
+.level1-module .card:hover {
+  border-color: var(--border-strong, #d4d4d4);
 }
 
 .level1-module .card-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
+  gap: 12px;
 }
 
 .level1-module .card-title-group {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 }
 
-.level1-module .card-title {
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--text-primary);
-}
-
-.level1-module .card-count {
-  font-size: 11px;
-  font-weight: 600;
-  color: var(--text-muted);
-  background: var(--badge-grey-bg);
-  padding: 2px 8px;
-  border-radius: var(--radius-pill);
-}
-
-.level1-module .card-subtitle-link {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  color: var(--brand-green-text);
-  font-size: 12px;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.level1-module .badge-analyzed {
-  background-color: var(--badge-green-bg);
-  color: var(--badge-green-text);
-  border: 1px solid var(--badge-green-border);
-  padding: 2px 8px;
-  border-radius: var(--radius-pill);
-  font-size: 11px;
-  font-weight: 600;
-}
-
-/* Tables */
-.level1-module .data-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 13px;
-}
-
-.level1-module .data-table th {
-  text-align: left;
-  padding: 10px 12px;
-  font-size: 11px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  border-bottom: 1px solid var(--border-color);
-  background-color: #fafbfc;
-}
-
-.level1-module .data-table td {
-  padding: 12px;
-  border-bottom: 1px solid var(--border-subtle);
-  vertical-align: middle;
-}
-
-.level1-module .type-badge {
-  font-size: 11px;
-  font-weight: 600;
-  padding: 3px 8px;
-  border-radius: var(--radius-sm);
-  display: inline-block;
-}
-
-.level1-module .type-badge.amr-gene {
-  background-color: #e6f4ea;
-  color: #0d593f;
-}
-
-.level1-module .type-badge.mutation {
-  background-color: #fef3c7;
-  color: #92400e;
-}
-
-.level1-module .gene-name {
-  font-family: var(--font-mono);
-  font-weight: 600;
-}
-
-.level1-module .code-box {
-  display: inline-block;
-  padding: 2px 8px;
-  border-radius: var(--radius-sm);
-  font-family: var(--font-mono);
-  font-weight: 700;
-  font-size: 12px;
-}
-
-.level1-module .code-box.R {
-  background-color: #fee2e2;
-  color: #991b1b;
-}
-
-.level1-module .code-box.S {
-  background-color: #d1fae5;
-  color: #065f46;
-}
-
-.level1-module .interpretation-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  font-size: 12px;
-  font-weight: 600;
-  color: #065f46;
-}
-
-.level1-module .interpretation-badge.mismatch {
-  color: #b91c1c;
-}
-
-.level1-module .interpretation-badge.neutral {
-  color: #4b5563;
-}
-
-.level1-module .result-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 2px 8px;
-  border-radius: var(--radius-pill);
-  font-size: 12px;
-  font-weight: 600;
-}
-
-.level1-module .result-badge.resistant {
-  background-color: #fee2e2;
-  color: #991b1b;
-}
-
-.level1-module .result-badge.susceptible {
-  background-color: #d1fae5;
-  color: #065f46;
-}
-
-.level1-module .dot-indicator {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-}
-
-.level1-module .dot-resistant { background-color: #ef4444; }
-.level1-module .dot-susceptible { background-color: #10b981; }
-
-/* Match Card */
-.level1-module .match-card {
-  background-color: var(--bg-card-tint-green);
-  border: 1px solid #c9e7d4;
-}
-
-.level1-module .match-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 12px;
-}
-
-.level1-module .match-tag {
-  font-size: 11px;
-  font-weight: 700;
-  color: var(--brand-green-text);
-  letter-spacing: 0.5px;
-}
-
-.level1-module .match-icon-badge {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background-color: #d1ebd9;
-  color: var(--brand-green-text);
+.level1-module .card-title-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 7px;
+  background: var(--accent-bg, #ecfeff);
+  color: var(--accent, #0891b2);
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
-.level1-module .match-title {
-  font-size: 20px;
-  font-weight: 800;
-  color: var(--brand-green-dark);
-  margin-bottom: 8px;
+.level1-module .card-title {
+  font-family: var(--font-display, 'Plus Jakarta Sans', sans-serif);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary, #171717);
+  letter-spacing: -0.3px;
 }
 
-.level1-module .match-description {
+.level1-module .card-count {
+  font-family: var(--font-mono, monospace);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted, #737373);
+  background: var(--bg-card-subtle, #f5f5f5);
+  padding: 3px 9px;
+  border-radius: var(--radius-full, 9999px);
+  border: 1px solid var(--border-subtle, #e5e5e5);
+}
+
+.level1-module .card-subtitle-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   font-size: 12px;
-  color: var(--text-secondary);
-  line-height: 1.5;
+  font-weight: 600;
+  color: var(--accent, #0891b2);
+  cursor: pointer;
+  transition: color 0.15s ease;
 }
 
-/* Organism Card */
+.level1-module .card-subtitle-link:hover {
+  color: #0e7490;
+  text-decoration: underline;
+}
+
+/* ============================================================
+   Organism Summary Card
+   ============================================================ */
+.level1-module .organism-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .level1-module .organism-header-row {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: flex-start;
-  gap: 16px;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
 }
 
 .level1-module .organism-main-info {
@@ -448,72 +304,138 @@
 .level1-module .organism-badge-icon {
   width: 44px;
   height: 44px;
-  border-radius: var(--radius-md);
-  background-color: #eaf5ee;
-  color: var(--brand-green-text);
+  border-radius: 10px;
+  background: var(--accent-bg, #ecfeff);
+  color: var(--accent, #0891b2);
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid rgba(8, 145, 178, 0.2);
+}
+
+.level1-module .organism-titles {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .level1-module .organism-name-status {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 .level1-module .organism-name {
-  font-size: 18px;
+  font-family: var(--font-display, 'Plus Jakarta Sans', sans-serif);
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text-primary, #171717);
+  letter-spacing: -0.5px;
+}
+
+.level1-module .badge-analyzed {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: var(--radius-full, 9999px);
+  font-size: 11px;
   font-weight: 700;
-  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  background: var(--color-success-bg, #f0fdf4);
+  color: var(--color-success-text, #15803d);
+  border: 1px solid rgba(22, 163, 74, 0.2);
 }
 
 .level1-module .isolate-subtext {
-  font-size: 12px;
-  color: var(--text-muted);
+  font-size: 13px;
+  color: var(--text-secondary, #525252);
+}
+
+.level1-module .isolate-id-val {
+  font-family: var(--font-mono, monospace);
+  font-weight: 700;
+  color: var(--text-primary, #171717);
 }
 
 .level1-module .organism-meta-details {
-  display: flex;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
 }
 
 .level1-module .meta-item {
+  background: var(--bg-card-subtle, #f5f5f5);
+  border: 1px solid var(--border-subtle, #e5e5e5);
+  border-radius: var(--radius-sm, 6px);
+  padding: 10px 14px;
   display: flex;
   flex-direction: column;
+  gap: 3px;
 }
 
 .level1-module .meta-label {
   font-size: 10px;
   font-weight: 700;
-  color: var(--text-muted);
   text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-muted, #737373);
 }
 
 .level1-module .meta-value {
-  font-size: 12px;
+  font-family: var(--font-mono, monospace);
+  font-size: 12.5px;
   font-weight: 600;
-  color: var(--text-primary);
+  color: var(--text-primary, #171717);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .level1-module .stats-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-}
-
-.level1-module .stat-box {
-  background-color: #f9fafb;
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-md);
-  padding: 12px;
-  display: flex;
-  align-items: center;
   gap: 12px;
 }
 
+.level1-module .stat-box {
+  background: #ffffff;
+  border: 1px solid var(--border-subtle, #e5e5e5);
+  border-radius: var(--radius-md, 10px);
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.level1-module .stat-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2.5px;
+  background: var(--border-subtle, #e5e5e5);
+}
+
+.level1-module .stat-box.highlight::before {
+  background: var(--accent, #0891b2);
+}
+
 .level1-module .stat-icon-container {
-  color: var(--brand-green-text);
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: var(--bg-card-subtle, #f5f5f5);
+  color: var(--accent, #0891b2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
 .level1-module .stat-info {
@@ -521,18 +443,270 @@
   flex-direction: column;
 }
 
-.level1-module .stat-label {
-  font-size: 11px;
-  color: var(--text-muted);
-}
-
 .level1-module .stat-value {
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--text-primary);
+  font-family: var(--font-display, 'Plus Jakarta Sans', sans-serif);
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--text-primary, #171717);
+  line-height: 1.1;
 }
 
-/* Genome track */
+.level1-module .stat-label {
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--text-muted, #737373);
+}
+
+/* ============================================================
+   Genotype Match Status Card
+   ============================================================ */
+.level1-module .match-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.level1-module .match-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+}
+
+.level1-module .match-card.consistent::before { background: var(--color-success, #16a34a); }
+.level1-module .match-card.mismatch::before { background: var(--color-danger, #dc2626); }
+.level1-module .match-card.warning::before { background: var(--color-warning, #d97706); }
+
+.level1-module .match-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.level1-module .match-tag {
+  font-family: var(--font-mono, monospace);
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--text-muted, #737373);
+}
+
+.level1-module .match-icon-badge {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.level1-module .match-icon-badge.consistent {
+  background: var(--color-success-bg, #f0fdf4);
+  color: var(--color-success, #16a34a);
+}
+
+.level1-module .match-icon-badge.mismatch {
+  background: var(--color-danger-bg, #fef2f2);
+  color: var(--color-danger, #dc2626);
+}
+
+.level1-module .match-icon-badge.warning {
+  background: var(--color-warning-bg, #fffbeb);
+  color: var(--color-warning, #d97706);
+}
+
+.level1-module .match-title {
+  font-family: var(--font-display, 'Plus Jakarta Sans', sans-serif);
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.6px;
+  margin-bottom: 8px;
+}
+
+.level1-module .match-title.consistent { color: var(--color-success-text, #15803d); }
+.level1-module .match-title.mismatch { color: var(--color-danger-text, #b91c1c); }
+.level1-module .match-title.warning { color: var(--color-warning-text, #92400e); }
+
+.level1-module .match-description {
+  font-size: 13px;
+  color: var(--text-secondary, #525252);
+  line-height: 1.5;
+}
+
+.level1-module .concordance-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: var(--radius-full, 9999px);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  background: var(--bg-card-subtle, #f5f5f5);
+  border: 1px solid var(--border-subtle, #e5e5e5);
+  color: var(--text-primary, #171717);
+}
+
+.level1-module .concordance-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent, #0891b2);
+}
+
+/* ============================================================
+   Tables (AMR Findings, AST Phenotypes, GP Summary)
+   ============================================================ */
+.level1-module .data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  text-align: left;
+}
+
+.level1-module .data-table th {
+  background: var(--bg-card-subtle, #f5f5f5);
+  padding: 10px 14px;
+  font-weight: 700;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-muted, #737373);
+  border-bottom: 1px solid var(--border-subtle, #e5e5e5);
+  white-space: nowrap;
+}
+
+.level1-module .data-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--border-subtle, #e5e5e5);
+  color: var(--text-primary, #171717);
+  vertical-align: middle;
+}
+
+.level1-module .data-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.level1-module .data-table tbody tr:hover {
+  background: #fcfcfc;
+}
+
+.level1-module .type-badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: var(--radius-xs, 4px);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.level1-module .type-badge.amr-gene {
+  background: var(--accent-bg, #ecfeff);
+  color: var(--accent, #0891b2);
+  border: 1px solid rgba(8, 145, 178, 0.2);
+}
+
+.level1-module .type-badge.mutation {
+  background: #fff7ed;
+  color: #c2410c;
+  border: 1px solid rgba(194, 65, 12, 0.2);
+}
+
+.level1-module .gene-name {
+  font-family: var(--font-mono, monospace);
+  font-weight: 700;
+  color: var(--text-primary, #171717);
+}
+
+.level1-module .location-text {
+  font-family: var(--font-mono, monospace);
+  font-size: 12px;
+  color: var(--text-secondary, #525252);
+}
+
+/* Result Badges */
+.level1-module .result-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: var(--radius-full, 9999px);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.level1-module .result-badge.resistant {
+  background: var(--color-danger-bg, #fef2f2);
+  color: var(--color-danger-text, #b91c1c);
+  border: 1px solid rgba(220, 38, 38, 0.2);
+}
+
+.level1-module .result-badge.susceptible {
+  background: var(--color-success-bg, #f0fdf4);
+  color: var(--color-success-text, #15803d);
+  border: 1px solid rgba(22, 163, 74, 0.2);
+}
+
+.level1-module .dot-indicator {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.level1-module .dot-resistant { background: var(--color-danger, #dc2626); }
+.level1-module .dot-susceptible { background: var(--color-success, #16a34a); }
+
+.level1-module .code-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: var(--radius-sm, 6px);
+  font-family: var(--font-mono, monospace);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.level1-module .code-box.R {
+  background: var(--color-danger-bg, #fef2f2);
+  color: var(--color-danger-text, #b91c1c);
+  border: 1px solid rgba(220, 38, 38, 0.25);
+}
+
+.level1-module .code-box.S {
+  background: var(--color-success-bg, #f0fdf4);
+  color: var(--color-success-text, #15803d);
+  border: 1px solid rgba(22, 163, 74, 0.25);
+}
+
+.level1-module .interpretation-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-success-text, #15803d);
+}
+
+.level1-module .interpretation-badge.mismatch {
+  color: var(--color-danger-text, #b91c1c);
+}
+
+.level1-module .interpretation-badge.neutral {
+  color: var(--text-muted, #737373);
+}
+
+/* ============================================================
+   Genome Visualization Track
+   ============================================================ */
 .level1-module .genome-track-container {
   display: flex;
   flex-direction: column;
@@ -541,127 +715,102 @@
 
 .level1-module .genome-header-info {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
 }
 
 .level1-module .chromosome-title {
   font-weight: 700;
-  font-size: 13px;
+  color: var(--text-primary, #171717);
 }
 
 .level1-module .chromosome-size {
-  color: var(--text-muted);
-  font-size: 12px;
+  color: var(--text-muted, #737373);
 }
 
 .level1-module .genome-mode-tag {
+  font-family: var(--font-mono, monospace);
   font-size: 10px;
   font-weight: 700;
-  color: var(--text-muted);
   letter-spacing: 0.5px;
+  color: var(--text-muted, #737373);
 }
 
 .level1-module .genome-visual-wrapper {
-  position: relative;
-  padding: 24px 0 12px 0;
+  background: var(--bg-card-subtle, #f5f5f5);
+  border: 1px solid var(--border-subtle, #e5e5e5);
+  border-radius: var(--radius-md, 10px);
+  padding: 16px 20px;
 }
 
 .level1-module .scale-axis {
   display: flex;
   justify-content: space-between;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+  font-family: var(--font-mono, monospace);
   font-size: 10px;
-  color: var(--text-muted);
-}
-
-.level1-module .scale-tick {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.level1-module .tick-line {
-  width: 1px;
-  height: 6px;
-  background-color: var(--border-color);
-  margin-top: 2px;
+  color: var(--text-muted, #737373);
+  margin-bottom: 8px;
 }
 
 .level1-module .linear-track-bar {
-  height: 20px;
-  background-color: var(--track-bg);
-  border-radius: var(--radius-sm);
   position: relative;
-  overflow: visible;
+  height: 28px;
+  background: #e5e7eb;
+  border-radius: 6px;
   display: flex;
   align-items: center;
+  overflow: visible;
 }
 
 .level1-module .track-block {
   height: 100%;
-  background-color: var(--track-block-bg);
-  border-radius: 2px;
+  background: #d1d5db;
+  border-radius: 4px;
 }
 
 .level1-module .track-marker-pin {
   position: absolute;
-  top: -14px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  top: -8px;
   transform: translateX(-50%);
   cursor: pointer;
   z-index: 2;
 }
 
-.level1-module .track-marker-pin:hover .pin-tooltip-card {
-  opacity: 1;
-  visibility: visible;
-}
-
 .level1-module .pin-bar {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
+  width: 4px;
+  height: 44px;
+  border-radius: 2px;
 }
 
-.level1-module .pin-bar.amr-gene { background-color: var(--gene-amr-color); }
-.level1-module .pin-bar.mutation { background-color: var(--gene-mutation-color); }
-
-.level1-module .pin-stem {
-  width: 2px;
-  height: 24px;
-  background-color: currentColor;
-  opacity: 0.7;
-}
+.level1-module .pin-bar.amr-gene { background: var(--accent, #0891b2); }
+.level1-module .pin-bar.mutation { background: #ea580c; }
 
 .level1-module .pin-tooltip-card {
+  display: none;
   position: absolute;
-  bottom: 100%;
-  margin-bottom: 6px;
-  background-color: #111827;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #171717;
   color: #ffffff;
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 10px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 11px;
   white-space: nowrap;
-  display: flex;
-  flex-direction: column;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.15s ease;
-  pointer-events: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.level1-module .track-marker-pin:hover .pin-tooltip-card {
+  display: block;
 }
 
 .level1-module .genome-legend {
   display: flex;
-  gap: 16px;
-  font-size: 11px;
-  color: var(--text-secondary);
+  gap: 20px;
+  font-size: 12px;
+  color: var(--text-secondary, #525252);
+  margin-top: 4px;
 }
 
 .level1-module .legend-item {
@@ -671,74 +820,10 @@
 }
 
 .level1-module .legend-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
 }
 
-.level1-module .legend-dot.amr-gene { background-color: var(--gene-amr-color); }
-.level1-module .legend-dot.mutation { background-color: var(--gene-mutation-color); }
-.level1-module .legend-dot.other { background-color: var(--gene-other-color); }
-
-/* Modal */
-.level1-module .modal-overlay,
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(17, 24, 39, 0.5);
-  backdrop-filter: blur(2px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-}
-
-.level1-module .modal-content,
-.modal-content {
-  background-color: #ffffff;
-  border-radius: var(--radius-lg);
-  width: 90%;
-  max-width: 800px;
-  max-height: 85vh;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-}
-
-.level1-module .modal-header,
-.modal-header {
-  padding: 16px 24px;
-  border-bottom: 1px solid var(--border-color);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.level1-module .modal-title,
-.modal-title {
-  font-size: 15px;
-  font-weight: 700;
-}
-
-.level1-module .modal-close-btn,
-.modal-close-btn {
-  background: none;
-  border: none;
-  color: var(--text-muted);
-  cursor: pointer;
-  padding: 4px;
-  border-radius: 4px;
-}
-
-.level1-module .modal-body,
-.modal-body {
-  padding: 24px;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
+.level1-module .legend-dot.amr-gene { background: var(--accent, #0891b2); }
+.level1-module .legend-dot.mutation { background: #ea580c; }
