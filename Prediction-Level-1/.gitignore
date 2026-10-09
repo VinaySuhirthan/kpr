@@ -1,0 +1,32 @@
+# Node.js
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+dist-ssr/
+*.local
+
+# Python
+__pycache__/
+backend/**/__pycache__/
+.pytest_cache/
+backend/.pytest_cache/
+*.pyc
+.venv/
+backend/.venv/
+
+# Environment & Logs
+.env
+*.log
+npm-debug.log*
+
+# Editor & OS
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

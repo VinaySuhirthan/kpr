@@ -1,0 +1,744 @@
+/* Level 1 Module Scoped Styles */
+.level1-module {
+  --bg-app: #f6f8f7;
+  --bg-card: #ffffff;
+  --bg-card-tint-green: #f1f8f4;
+  
+  --border-color: #e2e7e4;
+  --border-subtle: #ebf0ed;
+  
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --text-muted: #6b7280;
+  --text-light: #9ca3af;
+  
+  --brand-green-dark: #154234;
+  --brand-green-hover: #0e3025;
+  --brand-green-text: #133e32;
+  
+  --badge-green-bg: #e6f4ea;
+  --badge-green-text: #0d593f;
+  --badge-green-border: #c3e6d2;
+  
+  --badge-red-bg: #fde8e8;
+  --badge-red-text: #c81e1e;
+  --badge-red-border: #f8b4b4;
+  
+  --badge-grey-bg: #f3f4f6;
+  --badge-grey-text: #4b5563;
+  
+  --track-bg: #eaeaea;
+  --track-block-bg: #d4d4d4;
+  --gene-amr-color: #10b981;
+  --gene-mutation-color: #ef4444;
+  --gene-other-color: #d1d5db;
+  
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-pill: 9999px;
+  
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.03);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.04), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+  
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', Consolas, Monaco, monospace;
+
+  font-family: var(--font-sans);
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.level1-module .page-title-section {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.level1-module .page-title-section h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.4px;
+}
+
+.level1-module .page-title-section p {
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+.level1-module .error-banner {
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #991b1b;
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* Controls */
+.level1-module .control-bar-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 18px 24px;
+  box-shadow: var(--shadow-sm);
+}
+
+.level1-module .control-bar-grid {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.level1-module .control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.level1-module .control-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-secondary);
+}
+
+.level1-module .select-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.level1-module .custom-select {
+  width: 100%;
+  appearance: none;
+  background-color: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 10px 36px 10px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.level1-module .custom-select:focus {
+  outline: none;
+  border-color: var(--brand-green-dark);
+  box-shadow: 0 0 0 3px rgba(21, 66, 52, 0.1);
+}
+
+.level1-module .select-chevron {
+  position: absolute;
+  right: 12px;
+  pointer-events: none;
+  color: var(--text-muted);
+}
+
+.level1-module .btn-analyze {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--brand-green-dark);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 10px 22px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+  height: 41px;
+}
+
+.level1-module .btn-analyze:hover {
+  background-color: var(--brand-green-hover);
+}
+
+.level1-module .btn-analyze:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Grids & Cards */
+.level1-module .grid-2-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.level1-module .grid-2-col-asymmetric {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 24px;
+}
+
+@media (max-width: 1024px) {
+  .level1-module .grid-2-col,
+  .level1-module .grid-2-col-asymmetric {
+    grid-template-columns: 1fr;
+  }
+}
+
+.level1-module .card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+}
+
+.level1-module .empty-state-card {
+  text-align: center;
+  padding: 48px 20px;
+  color: var(--text-secondary);
+}
+
+.level1-module .loading-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px;
+  gap: 16px;
+}
+
+.level1-module .loading-spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid var(--border-color);
+  border-top-color: var(--brand-green-dark);
+  border-radius: 50%;
+  animation: l1-spin 0.8s linear infinite;
+}
+
+@keyframes l1-spin {
+  to { transform: rotate(360deg); }
+}
+
+.level1-module .card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.level1-module .card-title-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.level1-module .card-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.level1-module .card-count {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: var(--badge-grey-bg);
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+}
+
+.level1-module .card-subtitle-link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--brand-green-text);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.level1-module .badge-analyzed {
+  background-color: var(--badge-green-bg);
+  color: var(--badge-green-text);
+  border: 1px solid var(--badge-green-border);
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* Tables */
+.level1-module .data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.level1-module .data-table th {
+  text-align: left;
+  padding: 10px 12px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border-color);
+  background-color: #fafbfc;
+}
+
+.level1-module .data-table td {
+  padding: 12px;
+  border-bottom: 1px solid var(--border-subtle);
+  vertical-align: middle;
+}
+
+.level1-module .type-badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  display: inline-block;
+}
+
+.level1-module .type-badge.amr-gene {
+  background-color: #e6f4ea;
+  color: #0d593f;
+}
+
+.level1-module .type-badge.mutation {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.level1-module .gene-name {
+  font-family: var(--font-mono);
+  font-weight: 600;
+}
+
+.level1-module .code-box {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.level1-module .code-box.R {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.level1-module .code-box.S {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.level1-module .interpretation-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #065f46;
+}
+
+.level1-module .interpretation-badge.mismatch {
+  color: #b91c1c;
+}
+
+.level1-module .interpretation-badge.neutral {
+  color: #4b5563;
+}
+
+.level1-module .result-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.level1-module .result-badge.resistant {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.level1-module .result-badge.susceptible {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.level1-module .dot-indicator {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.level1-module .dot-resistant { background-color: #ef4444; }
+.level1-module .dot-susceptible { background-color: #10b981; }
+
+/* Match Card */
+.level1-module .match-card {
+  background-color: var(--bg-card-tint-green);
+  border: 1px solid #c9e7d4;
+}
+
+.level1-module .match-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.level1-module .match-tag {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--brand-green-text);
+  letter-spacing: 0.5px;
+}
+
+.level1-module .match-icon-badge {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #d1ebd9;
+  color: var(--brand-green-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.level1-module .match-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--brand-green-dark);
+  margin-bottom: 8px;
+}
+
+.level1-module .match-description {
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Organism Card */
+.level1-module .organism-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.level1-module .organism-main-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.level1-module .organism-badge-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background-color: #eaf5ee;
+  color: var(--brand-green-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.level1-module .organism-name-status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.level1-module .organism-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.level1-module .isolate-subtext {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.level1-module .organism-meta-details {
+  display: flex;
+  gap: 20px;
+}
+
+.level1-module .meta-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.level1-module .meta-label {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.level1-module .meta-value {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.level1-module .stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.level1-module .stat-box {
+  background-color: #f9fafb;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.level1-module .stat-icon-container {
+  color: var(--brand-green-text);
+}
+
+.level1-module .stat-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.level1-module .stat-label {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.level1-module .stat-value {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* Genome track */
+.level1-module .genome-track-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.level1-module .genome-header-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.level1-module .chromosome-title {
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.level1-module .chromosome-size {
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.level1-module .genome-mode-tag {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+}
+
+.level1-module .genome-visual-wrapper {
+  position: relative;
+  padding: 24px 0 12px 0;
+}
+
+.level1-module .scale-axis {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  font-size: 10px;
+  color: var(--text-muted);
+}
+
+.level1-module .scale-tick {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.level1-module .tick-line {
+  width: 1px;
+  height: 6px;
+  background-color: var(--border-color);
+  margin-top: 2px;
+}
+
+.level1-module .linear-track-bar {
+  height: 20px;
+  background-color: var(--track-bg);
+  border-radius: var(--radius-sm);
+  position: relative;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+}
+
+.level1-module .track-block {
+  height: 100%;
+  background-color: var(--track-block-bg);
+  border-radius: 2px;
+}
+
+.level1-module .track-marker-pin {
+  position: absolute;
+  top: -14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateX(-50%);
+  cursor: pointer;
+  z-index: 2;
+}
+
+.level1-module .track-marker-pin:hover .pin-tooltip-card {
+  opacity: 1;
+  visibility: visible;
+}
+
+.level1-module .pin-bar {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.level1-module .pin-bar.amr-gene { background-color: var(--gene-amr-color); }
+.level1-module .pin-bar.mutation { background-color: var(--gene-mutation-color); }
+
+.level1-module .pin-stem {
+  width: 2px;
+  height: 24px;
+  background-color: currentColor;
+  opacity: 0.7;
+}
+
+.level1-module .pin-tooltip-card {
+  position: absolute;
+  bottom: 100%;
+  margin-bottom: 6px;
+  background-color: #111827;
+  color: #ffffff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.15s ease;
+  pointer-events: none;
+}
+
+.level1-module .genome-legend {
+  display: flex;
+  gap: 16px;
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+.level1-module .legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.level1-module .legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.level1-module .legend-dot.amr-gene { background-color: var(--gene-amr-color); }
+.level1-module .legend-dot.mutation { background-color: var(--gene-mutation-color); }
+.level1-module .legend-dot.other { background-color: var(--gene-other-color); }
+
+/* Modal */
+.level1-module .modal-overlay,
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(17, 24, 39, 0.5);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.level1-module .modal-content,
+.modal-content {
+  background-color: #ffffff;
+  border-radius: var(--radius-lg);
+  width: 90%;
+  max-width: 800px;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.level1-module .modal-header,
+.modal-header {
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.level1-module .modal-title,
+.modal-title {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.level1-module .modal-close-btn,
+.modal-close-btn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.level1-module .modal-body,
+.modal-body {
+  padding: 24px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}

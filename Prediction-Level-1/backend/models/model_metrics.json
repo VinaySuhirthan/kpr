@@ -1,0 +1,138 @@
+{
+  "Ampicillin": {
+    "model_available": true,
+    "accuracy": 0.7282608695652174,
+    "precision": 0.7105263157894737,
+    "recall": 0.6585365853658537,
+    "f1": 0.6835443037974683,
+    "roc_auc": 0.8240076518412243
+  },
+  "Aztreonam": {
+    "model_available": true,
+    "accuracy": 0.5434782608695652,
+    "precision": 0.5,
+    "recall": 0.3333333333333333,
+    "f1": 0.4,
+    "roc_auc": 0.6628571428571428
+  },
+  "Cefazolin": {
+    "model_available": true,
+    "accuracy": 0.7872340425531915,
+    "precision": 0.9090909090909091,
+    "recall": 0.5263157894736842,
+    "f1": 0.6666666666666666,
+    "roc_auc": 0.8345864661654135
+  },
+  "Cefepime": {
+    "model_available": true,
+    "accuracy": 0.6739130434782609,
+    "precision": 0.6363636363636364,
+    "recall": 0.6666666666666666,
+    "f1": 0.6511627906976745,
+    "roc_auc": 0.7504761904761905
+  },
+  "Ceftazidime": {
+    "model_available": true,
+    "accuracy": 0.574468085106383,
+    "precision": 0.5217391304347826,
+    "recall": 0.5714285714285714,
+    "f1": 0.5454545454545454,
+    "roc_auc": 0.6611721611721612
+  },
+  "Ceftriaxone": {
+    "model_available": true,
+    "accuracy": 0.8172043010752689,
+    "precision": 0.7931034482758621,
+    "recall": 0.6764705882352942,
+    "f1": 0.7301587301587301,
+    "roc_auc": 0.8160518444666002
+  },
+  "Ciprofloxacin": {
+    "model_available": true,
+    "accuracy": 0.7540983606557377,
+    "precision": 0.6491228070175439,
+    "recall": 0.5967741935483871,
+    "f1": 0.6218487394957983,
+    "roc_auc": 0.7188749666755533
+  },
+  "Clindamycin": {
+    "model_available": true,
+    "accuracy": 0.8222222222222222,
+    "precision": 0.875,
+    "recall": 0.5,
+    "f1": 0.6363636363636364,
+    "roc_auc": 0.7649769585253456
+  },
+  "Erythromycin": {
+    "model_available": true,
+    "accuracy": 0.6170212765957447,
+    "precision": 0.5,
+    "recall": 0.3888888888888889,
+    "f1": 0.4375,
+    "roc_auc": 0.7203065134099618
+  },
+  "Gentamicin": {
+    "model_available": true,
+    "accuracy": 0.73224043715847,
+    "precision": 0.56,
+    "recall": 0.2692307692307692,
+    "f1": 0.36363636363636365,
+    "roc_auc": 0.7153552554315913
+  },
+  "Meropenem": {
+    "model_available": true,
+    "accuracy": 0.7142857142857143,
+    "precision": 0.6,
+    "recall": 0.5510204081632653,
+    "f1": 0.574468085106383,
+    "roc_auc": 0.6994841892801077
+  },
+  "Oxacillin": {
+    "model_available": true,
+    "accuracy": 0.717391304347826,
+    "precision": 0.6666666666666666,
+    "recall": 0.7,
+    "f1": 0.6829268292682927,
+    "roc_auc": 0.8211538461538461
+  },
+  "Piperacillin-Tazobactam": {
+    "model_available": true,
+    "accuracy": 0.7553956834532374,
+    "precision": 0.5625,
+    "recall": 0.25,
+    "f1": 0.34615384615384615,
+    "roc_auc": 0.6736785329018339
+  },
+  "Tetracycline": {
+    "model_available": true,
+    "accuracy": 0.8561151079136691,
+    "precision": 0.6363636363636364,
+    "recall": 0.30434782608695654,
+    "f1": 0.4117647058823529,
+    "roc_auc": 0.6454272863568216
+  },
+  "Tobramycin": {
+    "model_available": true,
+    "accuracy": 0.7111111111111111,
+    "precision": 0.6,
+    "recall": 0.7058823529411765,
+    "f1": 0.6486486486486487,
+    "roc_auc": 0.6869747899159665
+  },
+  "Trimethoprim-Sulfamethoxazole": {
+    "model_available": true,
+    "accuracy": 0.8152173913043478,
+    "precision": 0.7407407407407407,
+    "recall": 0.6666666666666666,
+    "f1": 0.7017543859649122,
+    "roc_auc": 0.8376344086021505
+  },
+  "Vancomycin": {
+    "model_available": true,
+    "accuracy": 0.8936170212765957,
+    "precision": 0.5,
+    "recall": 0.2,
+    "f1": 0.2857142857142857,
+    "roc_auc": 0.5666666666666667
+  }
+}
